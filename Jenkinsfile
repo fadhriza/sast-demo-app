@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    environment {
-        PATH = "${PATH}:/usr/local/bin/bandit"
-    }
     stages {
         stage('Checkout') {
             steps {
@@ -11,8 +8,8 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'python3 install bandit --user'
-                sh 'python3 install --upgrade pip'
+                sh 'pip3 install bandit --user'
+                sh 'pip3 install --upgrade pip'
             }
         }
         stage('SAST Analysis') {
