@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'pip3 install bandit'
+                sh 'pip3 install bandit --user'
                 sh 'pip3 install --upgrade pip'
             }
         }
