@@ -11,8 +11,8 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'pip3 install bandit --user'
-                sh 'pip3 install --upgrade pip'
+                sh 'python3 install bandit --user'
+                sh 'python3 install --upgrade pip'
             }
         }
         stage('SAST Analysis') {
