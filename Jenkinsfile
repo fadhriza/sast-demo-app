@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'pip install bandit'
+                sh 'pip3 install bandit'
             }
         }
         stage('SAST Analysis') {
