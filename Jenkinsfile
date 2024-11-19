@@ -8,8 +8,8 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'pip install bandit --user'
-                sh 'pip install --upgrade pip'
+                sh 'pip3 install bandit --user'
+                sh 'pip3 install --upgrade pip'
             }
         }
         stage('SAST Analysis') {
