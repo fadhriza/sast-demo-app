@@ -1,5 +1,8 @@
 pipeline {
     agent any
+    environment {
+        PATH = "${PATH}:/usr/local/bin/bandit"
+    }
     stages {
         stage('Checkout') {
             steps {
